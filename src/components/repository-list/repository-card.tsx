@@ -8,25 +8,22 @@ import {
   Wrap,
   WrapItem,
 } from '@chakra-ui/react'
+import { ParsedRepo } from '../../interfaces/parsed-repo'
 
 export interface RepositoryCardProps {
-  name: string
-  ownerAvatarUrl: string
-  description?: string
-  stars: number
-  issues: number
-  mainLanguage: string
-  repoUrl: string
+  repo: ParsedRepo
 }
 
 export function RepositoryCard({
-  name,
-  ownerAvatarUrl,
-  description,
-  stars,
-  issues,
-  mainLanguage,
-  repoUrl,
+  repo: {
+    name,
+    ownerAvatarUrl,
+    description,
+    stars,
+    issues,
+    mainLanguage,
+    repoUrl,
+  },
 }: RepositoryCardProps) {
   return (
     <Link href={repoUrl} target="_blank">
