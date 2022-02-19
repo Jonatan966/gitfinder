@@ -1,13 +1,10 @@
 import { Button } from '@chakra-ui/react'
-import { useRepoSearch } from '../../contexts/repo-search'
+import { useRepoSearch } from '../../../hooks/use-repo-search'
+import { useSearchBar } from '../../../hooks/use-search-bar'
 
-interface SearchButtonProps {
-  handleSearch(): void
-  handleClear(): void
-}
-
-export function SearchButton({ handleClear, handleSearch }: SearchButtonProps) {
+export function SearchButton() {
   const { isSearching, isInSearchMode } = useRepoSearch()
+  const { onSearch, onClear } = useSearchBar()
 
   if (isInSearchMode && !isSearching) {
     return (
@@ -15,7 +12,7 @@ export function SearchButton({ handleClear, handleSearch }: SearchButtonProps) {
         w="36"
         colorScheme="red"
         borderRadius="0"
-        onClick={() => handleClear()}
+        onClick={() => onClear()}
       >
         Limpar
       </Button>
@@ -27,7 +24,7 @@ export function SearchButton({ handleClear, handleSearch }: SearchButtonProps) {
       w="36"
       colorScheme="yellow"
       borderRadius="0"
-      onClick={() => handleSearch()}
+      onClick={() => onSearch()}
       isLoading={isSearching}
     >
       Buscar

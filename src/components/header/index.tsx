@@ -1,24 +1,7 @@
-import { HStack, Stack, Text } from '@chakra-ui/react'
-import { useRef } from 'react'
-import { useRepoSearch } from '../../contexts/repo-search'
-import { SearchButton } from './search-button'
-import { SearchInput } from './search-input'
+import { Stack, Text } from '@chakra-ui/react'
+import { SearchBar } from './search-bar'
 
 export function Header() {
-  const { search, clear } = useRepoSearch()
-  const searchInputRef = useRef<HTMLInputElement>(null)
-
-  function onSearch() {
-    search(searchInputRef.current?.value || '')
-  }
-
-  function onClear() {
-    if (!searchInputRef.current) return
-
-    searchInputRef.current.value = ''
-    clear()
-  }
-
   return (
     <Stack
       as="header"
@@ -38,17 +21,7 @@ export function Header() {
         Gitfinder
       </Text>
 
-      <HStack as="nav" w="100%">
-        <SearchInput
-          w="100%"
-          handleSearch={() => onSearch()}
-          ref={searchInputRef}
-        />
-        <SearchButton
-          handleSearch={() => onSearch()}
-          handleClear={() => onClear()}
-        />
-      </HStack>
+      <SearchBar />
     </Stack>
   )
 }
