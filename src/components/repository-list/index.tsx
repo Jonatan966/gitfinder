@@ -1,7 +1,7 @@
 import { Text } from '@chakra-ui/react'
 import { useRef, useEffect, useMemo } from 'react'
 import { Masonry } from 'masonic'
-import { useRepoSearch } from '../../contexts/repo-search'
+import { useRepoSearch } from '../../hooks/use-repo-search'
 import { RepositoryCard } from './repository-card'
 import { SkeletonList } from './skeleton-list'
 import { ParsedRepo } from '../../interfaces/parsed-repo'

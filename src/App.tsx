@@ -2,7 +2,7 @@ import { Flex } from '@chakra-ui/react'
 import { Header } from './components/header'
 import { RepositoryList } from './components/repository-list'
 import { SearchMessage } from './components/messages/search-message'
-import { useRepoSearch } from './contexts/repo-search'
+import { useRepoSearch } from './hooks/use-repo-search'
 import { NotFoundMessage } from './components/messages/not-found-message'
 
 function App() {
