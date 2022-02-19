@@ -1,4 +1,4 @@
-import { HStack, Text } from '@chakra-ui/react'
+import { HStack, Stack, Text } from '@chakra-ui/react'
 import { useRef } from 'react'
 import { useRepoSearch } from '../../contexts/repo-search'
 import { SearchButton } from './search-button'
@@ -20,23 +20,35 @@ export function Header() {
   }
 
   return (
-    <HStack
+    <Stack
       as="header"
+      direction={['column', null, 'row']}
       py="4"
-      spacing="6"
+      spacing={['2', null, '6']}
       position="sticky"
       top="0"
       bg="white"
       zIndex="2"
     >
-      <Text fontWeight="bold" fontSize="3xl">
+      <Text
+        textAlign={['center', null, 'left']}
+        fontWeight="bold"
+        fontSize="3xl"
+      >
         Gitfinder
       </Text>
-      <SearchInput handleSearch={() => onSearch()} ref={searchInputRef} />
-      <SearchButton
-        handleSearch={() => onSearch()}
-        handleClear={() => onClear()}
-      />
-    </HStack>
+
+      <HStack as="nav" w="100%">
+        <SearchInput
+          w="100%"
+          handleSearch={() => onSearch()}
+          ref={searchInputRef}
+        />
+        <SearchButton
+          handleSearch={() => onSearch()}
+          handleClear={() => onClear()}
+        />
+      </HStack>
+    </Stack>
   )
 }

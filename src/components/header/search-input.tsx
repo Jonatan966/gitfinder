@@ -31,7 +31,6 @@ const SearchInputBase: ForwardRefRenderFunction<
         <SearchIcon color="gray.300" />
       </InputLeftElement>
       <Input
-        w="100%"
         borderRadius="0"
         placeholder="Pesquise por um nome de um repositório"
         {...props}
