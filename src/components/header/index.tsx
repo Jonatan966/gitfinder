@@ -1,4 +1,5 @@
 import { Stack, Text } from '@chakra-ui/react'
+import { SuggestionProvider } from '../../hooks/use-suggestion/provider'
 import { SearchBar } from './search-bar'
 
 export function Header() {
@@ -21,7 +22,9 @@ export function Header() {
         Gitfinder
       </Text>
 
-      <SearchBar />
+      <SuggestionProvider>
+        <SearchBar />
+      </SuggestionProvider>
     </Stack>
   )
 }
