@@ -1,3 +1,4 @@
+import { CloseIcon, SearchIcon } from '@chakra-ui/icons'
 import { Button } from '@chakra-ui/react'
 import { useRepoSearch } from '../../../hooks/use-repo-search'
 import { useSearchBar } from '../../../hooks/use-search-bar'
@@ -13,6 +14,7 @@ export function SearchButton() {
         colorScheme="red"
         borderRadius="0"
         onClick={() => onClear()}
+        leftIcon={<CloseIcon />}
       >
         Limpar
       </Button>
@@ -26,6 +28,7 @@ export function SearchButton() {
       borderRadius="0"
       onClick={() => onSearch()}
       isLoading={isSearching}
+      leftIcon={<SearchIcon />}
     >
       Buscar
     </Button>
