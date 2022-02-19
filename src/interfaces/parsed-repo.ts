@@ -1,4 +1,5 @@
 export interface ParsedRepo {
+  id: string
   name: string
   ownerAvatarUrl: string
   description?: string
