@@ -1,7 +1,16 @@
 import { List, Text } from '@chakra-ui/react'
-import { Suggestion } from './suggestion'
+import { useMemo } from 'react'
+import { useSuggestion } from '../../../../hooks/use-suggestion'
+import { SuggestionCard } from './suggestion-card'
 
 export function SearchSuggestions() {
+  const { suggestions } = useSuggestion()
+
+  const filteredSuggestions = useMemo(
+    () => [...suggestions].reverse().splice(0, 5),
+    [suggestions]
+  )
+
   return (
     <List
       position="absolute"
@@ -18,9 +27,9 @@ export function SearchSuggestions() {
       <Text fontWeight="semibold" color="gray.400">
         Pesquisas recentes
       </Text>
-      <Suggestion />
-      <Suggestion />
-      <Suggestion />
+      {filteredSuggestions.map((suggestion) => (
+        <SuggestionCard suggestion={suggestion} key={suggestion.id} />
+      ))}
     </List>
   )
 }

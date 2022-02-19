@@ -1,4 +1,4 @@
 export interface SearchBarContextProps {
-  onSearch(searchTerm?: string): void
+  onSearch(searchTerm?: string, hasNewTerm?: boolean): void
   onClear(): void
 }
