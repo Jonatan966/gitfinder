@@ -1,11 +1,10 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider } from '@chakra-ui/react'
-import { QueryClientProvider, QueryClient } from 'react-query'
+import { QueryClientProvider } from 'react-query'
 import App from './App'
 import { RepoSearchProvider } from './hooks/use-repo-search/provider'
-
-export const queryClient = new QueryClient()
+import { queryClient } from './configs/query-client'
 
 ReactDOM.render(
   <StrictMode>
