@@ -12,7 +12,6 @@ export function SearchButton() {
       <Button
         w="36"
         colorScheme="red"
-        borderRadius="0"
         onClick={() => onClear()}
         leftIcon={<CloseIcon />}
       >
@@ -25,7 +24,6 @@ export function SearchButton() {
     <Button
       w="36"
       colorScheme="yellow"
-      borderRadius="0"
       onClick={() => onSearch()}
       isLoading={isSearching}
       leftIcon={<SearchIcon />}

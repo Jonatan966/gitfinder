@@ -27,7 +27,6 @@ const SearchInputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> =
           <SearchIcon color="gray.300" />
         </InputLeftElement>
         <Input
-          borderRadius="0"
           placeholder="Pesquise por um nome de um repositório"
           {...props}
           ref={searchInputRef}

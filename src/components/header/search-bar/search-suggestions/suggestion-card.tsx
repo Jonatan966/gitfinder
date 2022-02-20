@@ -31,7 +31,6 @@ export function SuggestionCard({ suggestion }: SuggestionCardProps) {
         display="block"
         color="black"
         variant="unstyled"
-        borderRadius="0"
         onClick={() => onSearch(suggestion.title, false)}
       >
         {suggestion.title}
@@ -40,7 +39,6 @@ export function SuggestionCard({ suggestion }: SuggestionCardProps) {
       <Button
         variant="unstyled"
         aria-label="Excluir pesquisa"
-        borderRadius="0"
         onClick={() => removeSuggestion(suggestion.id)}
       >
         <DeleteIcon color="red.500" boxSize="6" />
