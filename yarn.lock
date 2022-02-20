@@ -2659,10 +2659,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-masonic@^3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/masonic/-/masonic-3.6.1.tgz#cfcc1b1b1ab7cd11de2dbd76d1d231b90542aad0"
-  integrity sha512-ZwEqyPzzhekzP2lHiInatYVm0b0/wpZCx6oaeeQfO5hEKwgJrdIAoDQYlibRUjp/bQVH8TIAs8PIn7fMfcqVqw==
+masonic@^3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/masonic/-/masonic-3.6.2.tgz#202eb448b3cbfef75221d0b96c8e51050e86fd51"
+  integrity sha512-c4VJuUGldFwitl5cDXuFMRyNO9oxU3Mbk26HK47wTWnRAo8+tmeUByvE6bqrnJ3rfLBBPDG8UcaExgZU/l4Jwg==
   dependencies:
     "@essentials/memoize-one" "^1.1.0"
     "@essentials/one-key-map" "^1.2.0"
